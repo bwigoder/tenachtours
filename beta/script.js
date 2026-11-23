@@ -54,14 +54,15 @@
     var lines = [
       'Name: ' + v('name'),
       'Email: ' + v('email'),
-      'Group type: ' + v('group_type'),
+      'Group type: ' + type,
       'Group size: ' + (v('group_size') || 'not given'),
       'Tour: ' + v('tour'),
       'Preferred date: ' + (v('date') || 'flexible'),
       '',
       v('message')
     ];
-    var subject = 'Tour quote request: ' + v('group_type') + (v('group_size') ? ' (' + v('group_size') + ' people)' : '');
+    var type = v('group_type') || 'Not specified';
+    var subject = 'Tour quote request' + (v('group_type') ? ': ' + v('group_type') : '') + (v('group_size') ? ' (' + v('group_size') + ' people)' : '');
     window.location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
     status.textContent = 'Your email app should open with your request ready to send. If it doesn’t, email ' + EMAIL + ' directly.';
   });

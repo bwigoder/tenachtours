@@ -16,5 +16,3 @@ A static one-page site with no build step. Upload the whole folder to any static
   and remove the submit handler in script.js.
 - **Interview video:** the YouTube ID is set at the top of script.js (`VIDEO_ID`). It plays
   from youtube-nocookie.com and is removed when the overlay closes, so playback stops.
-- og:image uses a relative path. Some social networks need a full URL, so change it to
-  https://<your-domain>/images/shoshana-british-museum.jpg once the domain is known.
