@@ -1,455 +1,519 @@
-<!DOCTYPE HTML>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-	<title>Tenach Tours</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Tuition Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-	<script
-		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-	<!-- Custom Theme files -->
-	<link href="css/style.css" rel='stylesheet' type='text/css' />
-	<link href="css/swipebox.css" rel='stylesheet' type='text/css' />
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-	<!--/script-->
-	<script src="js/modernizr.custom.97074.js"></script>
-
-	<script type="text/javascript">
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
-				$('html,body').animate({scrollTop: $(this.hash).offset().top}, 900);
-			});
-		});
-	</script>
-	<!--script-->
-	<script src="js/jquery.swipebox.min.js"></script>
-	<script type="text/javascript">
-		jQuery(function ($) {
-			$(".swipebox").swipebox();
-		});
-	</script>
-
-
-	<script src="https://www.google.com/recaptcha/api.js"></script>
-	<!-- <script src="https://www.google.com/recaptcha/api.js?render=6LefuQgjAAAAAKN4C6QfErqLEDKhaL58zkpE6Hqj"></script> -->
-	<script>
-		const submit = false
-		function recaptchaCallback(token){
-			if(token){
-				document.querySelector('#form-submit-bth').disabled = false
-				submit = true
-			}
-		}
-		function onSubmit(form){
-			console.log(form)
-
-		}
-	</script>
-
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tenach Tours | Guided Tenach tours at the British Museum</title>
+<meta name="description" content="Guided tours through the Tenach and Jewish history at the British Museum with Mrs Shoshana Tugendhaft. For schools, shuls, organisations and family groups.">
+<meta property="og:title" content="Tenach Tours at the British Museum">
+<meta property="og:description" content="Guided tours through the Tenach and Jewish history, from Ur to Rome.">
+<link rel="canonical" href="https://tenachtours.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tenachtours.com/">
+<meta property="og:image" content="https://tenachtours.com/images/shoshana-british-museum.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://tenachtours.com/#website",
+   "url": "https://tenachtours.com/",
+   "name": "Tenach Tours",
+   "inLanguage": "en-GB"
+  },
+  {
+   "@type": "TouristAttraction",
+   "@id": "#british-museum",
+   "name": "The British Museum",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Great Russell Street",
+    "addressLocality": "London",
+    "postalCode": "WC1B 3DG",
+    "addressCountry": "GB"
+   }
+  },
+  {
+   "@type": "Person",
+   "@id": "https://tenachtours.com/#shoshana",
+   "name": "Shoshana Tugendhaft",
+   "honorificPrefix": "Mrs",
+   "jobTitle": "Tour guide",
+   "knowsAbout": [
+    "Tenach",
+    "Hebrew Bible",
+    "Jewish history",
+    "Biblical archaeology",
+    "British Museum"
+   ],
+   "worksFor": {
+    "@id": "https://tenachtours.com/#business"
+   }
+  },
+  {
+   "@type": "LocalBusiness",
+   "@id": "https://tenachtours.com/#business",
+   "name": "Tenach Tours",
+   "url": "https://tenachtours.com/",
+   "description": "Guided tours through the Tenach (the Hebrew Bible) and Jewish history at the British Museum, with Mrs Shoshana Tugendhaft. For schools, shuls, organisations, families and visitors to London.",
+   "image": "https://tenachtours.com/images/shoshana-british-museum.jpg",
+   "telephone": "+447816847900",
+   "email": "shoshanatug@gmail.com",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hendon, London",
+    "postalCode": "NW4",
+    "addressCountry": "GB"
+   },
+   "areaServed": {
+    "@type": "City",
+    "name": "London"
+   },
+   "founder": {
+    "@id": "https://tenachtours.com/#shoshana"
+   },
+   "makesOffer": [
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "TouristTrip",
+      "name": "The Highlights Tour",
+      "description": "An introduction to the British Museum and its most famous finds from biblical archaeology, including the Rosetta Stone, the Cyrus Cylinder, the Lachish Relief, the Black Obelisk of Shalmaneser and the Taylor Prism.",
+      "itinerary": {
+       "@id": "#british-museum"
+      }
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "TouristTrip",
+      "name": "Under the Rule of the Pharaohs",
+      "description": "Follow Avraham's family from Ur down into Egypt: Yosef's story, Egyptian culture, life under slavery, and the mummies.",
+      "itinerary": {
+       "@id": "#british-museum"
+      }
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "TouristTrip",
+      "name": "The Assyrians are coming!",
+      "description": "The Assyrian assault on Israel and Judea led to the Ten Lost Tribes. Discover this story as seen on the palace reliefs of the Neo-Assyrian kings.",
+      "itinerary": {
+       "@id": "#british-museum"
+      }
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "TouristTrip",
+      "name": "Purim in Persia",
+      "description": "Cyrus the Great conquers Babylon and the Jewish people find themselves under Persian rule. Life under Persian kings and in the court of Achashverosh, as told in Megillat Esther.",
+      "itinerary": {
+       "@id": "#british-museum"
+      }
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "TouristTrip",
+      "name": "Alexander the Great and the Maccabean Revolt",
+      "description": "Alexander reaches the Land of Israel, and Greek culture clashes with Torah values. Learn about Hellenism and the holiday of Chanukah in its historical setting, from the museum's remarkable collections.",
+      "itinerary": {
+       "@id": "#british-museum"
+      }
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "TouristTrip",
+      "name": "Rome and the Jews",
+      "description": "From 63 BCE to the destruction of Jerusalem in 70 CE: the people and policies that shaped Jewish life under Rome.",
+      "itinerary": {
+       "@id": "#british-museum"
+      }
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "TouristTrip",
+      "name": "The Four Galuyot",
+      "description": "The four exiles that the Jewish people endured were foretold in the book of Daniel. Travel back in time to see artefacts from each one, for a deeper understanding of Jewish history.",
+      "itinerary": {
+       "@id": "#british-museum"
+      }
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
-
 <body>
-	<!--header-->
-	<ul class="side_nav">
-		<li><a class="active scroll" href="#home"></a></li>
-		<li><a class="scroll" href="#tours"></a></li>
-		<li><a class="scroll" href="#about"></a></li>
-		<li><a class="scroll" href="#gallery"></a></li>
-		<li><a class="scroll" href="#test"></a></li>
-		<li><a class="scroll" href="#contact"></a></li>
-	</ul>
+<a class="skip-link" href="#main">Skip to content</a>
+<div style="width: 100%; font-family: Inter, system-ui, sans-serif; color: #1C2230; background: #FFFFFF; font-size: 16px; line-height: 1.6">
 
-	<div class="header-section" id="home">
-		<div class="header-top">
-			<div class="container">
-				<div class="inner-head">
-					<p class="col-md-4 mail"><i class="glyphicon glyphicon-envelope"></i><a
-							href="mailto:shoshanatug@gmail.com">shoshanatug@gmail.com</a></p>
-					<p class="col-md-4 phone"><i class="glyphicon glyphicon-earphone"></i> +44 (0)7816 847 900</p>
-					<p class="col-md-4 location"><i class="glyphicon glyphicon-map-marker"></i>WC1B 3DG</p>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-			<!--	 <div class="down"><a class="scroll" href="#contact"><img src="images/down.png" alt=""/></a></div> -->
-		</div>
-		<!--logo-->
-	</div>
-	<!--banner-->
-	<div class="banner">
-		<div class="banner-top">
-			<h3>Tenach Tours
-				at the British Museum</h3>
-			<a class="ready" href="#">with Mrs Shoshana Tugendhaft</a>
-		</div>
-	</div>
-	<svg id="curveDownColor" xmlns="https://www.w3.org/2000/svg" version="1.1" width="100%" height="100"
-		viewBox="0 0 100 100" preserveAspectRatio="none">
-		<path d="M0 0 C 50 100 80 100 100 0 Z"></path>
-	</svg>
-	<!--start-tours-->
-	<div class="services" id="tours">
-		<div class="container">
-			<h3 class="tittle">Tours</h3>
-			<div class="box2">
-				<div class="col-md-4 s-1"><a href="#">
-						<div class="view view-fifth">
-							<br></br> <img src="images/letter-a-64.png" alt="" />
-					</a>
-					<div class="mask">
-						<p>From the Sumerian city of Ur emerged the patriarchal family of Avraham whose great-grandson Yosef would
-							be led down to Egypt in chains...and would end up saving the region from famine.</p>
-						<p class="p2">Follow the trail of this family down to Egypt, discover the culture of this most mysterious of
-							ancient civilizations, imagine life as a slave under the Pharaoh and meet some awesome real Mummies who
-							used to walk the streets of ancient Egypt!</p>
-					</div>
-					<h3>Under the Rule<br>of the Pharaohs</h3>
-				</div>
-				</a>
+  <!-- Utility strip -->
+  <div style="background: #142847; color: #DCE3EF; font-size: 13px">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 8px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px">
+      <span class="hide-sm">Guided Tenach tours at the British Museum, Great Russell St, London WC1B 3DG</span>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px">
+        <a href="tel:+447816847900" style="color: #DCE3EF; text-decoration: none">+44 (0)7816 847 900</a>
+        <a href="mailto:shoshanatug@gmail.com" style="color: #DCE3EF; text-decoration: none">shoshanatug@gmail.com</a>
+      </div>
+    </div>
+  </div>
 
-			</div>
-			<div class="col-md-4 s-2"><a href="#">
-					<div class="view view-fifth">
-						<br></br> <img src="images/letter-b-64.png" alt="" />
-				</a>
-				<div class="mask">
-					<p>During the First Temple era, Israel and Judea repeatedly came under attack from the superpowers of their
-						day: the Assyrians and the Babylonians.</p>
-					<p class="p2">Come up close and personal to personalities like Sannacheriv and Nevuchadnezzar and discover
-						their methods of warfare. Come and see stunning reliefs directly from their palaces in Nineve and Bavel that
-						bring this tragic chapter of Jewish history to life.</p>
-				</div>
-				<h3>The Assyrians<br>are coming!</h3>
-			</div>
-			</a>
+  <!-- Nav -->
+  <header style="border-bottom: 1px solid #E3E6EC; background: #FFFFFF">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="#home" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #1C2230">
+        <span style="width: 44px; height: 44px; border: 1.5px solid #1F3A68; display: flex; align-items: center; justify-content: center; font-family: Marcellus, serif; font-size: 22px; color: #1F3A68">T</span>
+        <span style="display: flex; flex-direction: column; line-height: 1.15">
+          <span style="font-family: Marcellus, serif; font-size: 22px; letter-spacing: 0.04em">Tenach Tours</span>
+          <span style="font-size: 12px; color: #5A6273; letter-spacing: 0.06em; text-transform: uppercase">with Mrs Shoshana Tugendhaft</span>
+        </span>
+      </a>
+      <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 28px; font-size: 15px; font-weight: 500">
+        <a href="#tours" style="color: #1C2230; text-decoration: none; padding: 10px 0">Tours</a>
+        <a href="#about" style="color: #1C2230; text-decoration: none; padding: 10px 0">About</a>
+        <a href="#gallery" style="color: #1C2230; text-decoration: none; padding: 10px 0">Gallery</a>
+        <a href="#testimonials" style="color: #1C2230; text-decoration: none; padding: 10px 0">Testimonials</a>
+        <a href="#contact" style="background: #1F3A68; color: #FFFFFF; text-decoration: none; padding: 10px 20px; border-radius: 2px">Get a free quote</a>
+      </nav>
+    </div>
+  </header>
 
-		</div>
-		<div class="col-md-4 s-3"><a href="#">
-				<div class="view view-fifth">
-					<br></br> <img src="images/letter-c-64.png" alt="" />
-			</a>
-			<div class="mask">
-				<p>On the fateful night that Belshazaar saw the writing on the wall, the Persians and Medes took over control of
-					the huge empire the Babylonians had left behind.</p>
-				<p class="p2">The Jews who were now exiled from their land soon found themselves subjects of Achashverosh, whose
-					court was famed for its opulence and decadence. Let Megillat Esther come to life and follow the Jews as they
-					experience the foreign policy of their new rulers.</p>
-			</div>
-			<h3>Purim<br>in Persia</h3>
-		</div>
-		</a>
+  <!-- Hero -->
+  <main id="main"><section id="home" style="background: #1F3A68; color: #FFFFFF">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px 0; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+      <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+        <span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #D9AE4E">Tenach Tours at the British Museum</span>
+        <h1 class="h-display" style="margin: 0; font-family: Marcellus, serif; font-weight: 400; font-size: 60px; line-height: 1.08">From Ur to Rome, brought to life in the British Museum</h1>
+        <p style="margin: 0; font-size: 19px; color: #DCE3EF; max-width: 560px">Guided tours through the Tenach (the Hebrew Bible) and Jewish history, among the Egyptian, Assyrian, Persian, Greek and Roman galleries. For schools, shuls, organisations, families and visitors to London.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px">
+          <a href="#tours" style="background: #D9AE4E; color: #142847; text-decoration: none; font-weight: 600; padding: 14px 26px; border-radius: 2px">Explore the tours</a>
+          <a href="#contact" style="border: 1px solid #8FA3C4; color: #FFFFFF; text-decoration: none; font-weight: 500; padding: 14px 26px; border-radius: 2px">Request a free quote</a>
+        </div>
+      </div>
+      <div style="flex: 1 1 400px; min-width: 0">
+        <img fetchpriority="high" src="images/shoshana-british-museum.jpg" alt="Shoshana Tugendhaft welcomes you to the British Museum" style="display: block; width: 100%; aspect-ratio: 565 / 630; max-height: 600px; object-fit: cover; object-position: center top; border: 1px solid #4A6496">
+      </div>
+    </div>
+    <!-- Fact band -->
+    <div style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 64px">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; border-top: 1px solid #4A6496; padding-top: 32px">
+        <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: Marcellus, serif; font-size: 36px">~50,000</span><span style="font-size: 14px; color: #B9C6DC">artefacts on display</span></div>
+        <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: Marcellus, serif; font-size: 36px">~100</span><span style="font-size: 14px; color: #B9C6DC">galleries to navigate</span></div>
+        <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: Marcellus, serif; font-size: 36px">12+ years</span><span style="font-size: 14px; color: #B9C6DC">guiding at the British Museum</span></div>
+        <div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: Marcellus, serif; font-size: 36px">25+ years</span><span style="font-size: 14px; color: #B9C6DC">teaching Tenach and Jewish history</span></div>
+      </div>
+    </div>
+  </section>
 
-	</div>
-	<div class="clearfix"></div>
-	</div>
-	</div>
-	</div>
-	<!--end-tours-->
-	<!--start-moretours-->
-	<div class="services" id="moretours">
-		<div class="container">
-			<div class="box2">
-				<div class="col-md-4 s-1"><a href="#">
-						<div class="view view-fifth">
-							<br></br> <img src="images/letter-d-64.png" alt="" />
-					</a>
-					<div class="mask">
-						<p>Alexander the Great brought enlightened Greek civilisation with him when he marched into the land of
-							Israel in 332 BCE. Ultimately though, Greek culture would conflict with Torah values and ignite a clash of
-							civilizations in the land of Israel during the Second Temple period. Come and see the 'beauty of Yafet'
-							and meet some of the personalities that we faced off at the time of the Chanukah story and during the
-							Hellenistic domination of the land of Israel.</p>
-						<p class="p2"></p>
-					</div>
-					<h3>Alexander the Great <br>and the Maccabian Revolt</h3>
-				</div>
-				</a>
+  <!-- Tours -->
+  <section id="tours" style="background: #FFFFFF">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 48px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6219; font-weight: 600">The tours</span>
+        <h2 class="h-section" style="margin: 0; font-family: Marcellus, serif; font-weight: 400; font-size: 44px; line-height: 1.15">Choose your tour</h2>
+      </div>
 
-			</div>
-			<div class="col-md-4 s-2"><a href="#">
-					<div class="view view-fifth">
-						<br></br> <img src="images/letter-e-64.png" alt="" />
-				</a>
-				<div class="mask">
-					<p>From the year 63 BCE when the Roman General Pompeii marched into Judea and the Temple, the Jews would live
-						under Roman rule and patronage for over five centuries. Come and meet some of the people whose policies
-						deeply affected the lives of the Jews in the Empire. Come and see the soldiers who burned down Jerusalem in
-						70 CE. Come to grips with a civilization that laid the foundation for today’s democracy and yet became the
-						nemesis of the Jewish people in the first century CE..</p>
-					<p class="p2"></p>
-				</div>
-				<h3>Rome<br>and the Jews</h3>
-			</div>
-			</a>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px 32px; margin-top: -16px; padding: 18px 24px; background: #EEF1F5; font-size: 16px; font-weight: 500;">
+        <span style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F3A68" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Every tour lasts two hours</span>
+        <span style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F3A68" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>We meet in front of the museum, Great Russell Street</span>
+      </div>
 
-		</div>
-		<div class="col-md-4 s-3"><a href="#">
-				<div class="view view-fifth">
-					<br></br> <img src="images/letter-f-64.png" alt="" />
-			</a>
-			<div class="mask">
-				<p>Nebuchadnezzar in his famous dream envisioned a colossal statue made of four elements, each representing
-					another World Empire under whose domination the Jewish people would live. Travel back in time to experience
-					the four very different cultures that first subdued and then attempted to absorb the eternal people. Surround
-					yourself with artefacts hailing from a glorious past and imagine the long journey of our people.</p>
-				<p class="p2"></p>
-			</div>
-			<h3>The Four<br>Galuyot/Exiles</h3>
-		</div>
-		</a>
+      <article style="background: #142847; color: #FFFFFF; padding: 48px; display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: center">
+        <div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 18px; align-items: flex-start">
+          <span style="display: flex; align-items: center; gap: 8px; background: #D9AE4E; color: #142847; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 7px 14px; border-radius: 2px"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"></path></svg>Most popular</span>
+          <h3 style="margin: 0; font-family: Marcellus, serif; font-weight: 400; font-size: 40px; line-height: 1.15">The Highlights Tour</h3>
+          <p style="margin: 0; color: #DCE3EF; font-size: 18px; max-width: 520px">Your introduction to the British Museum, and to its most famous and remarkable finds from biblical archaeology. The ideal first visit.</p>
+          <a href="#contact" style="color: #D9AE4E; font-weight: 600; font-size: 15px; text-decoration: none; padding: 10px 0">Ask about this tour →</a>
+        </div>
+        <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+          <span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #B9C6DC; font-weight: 600">Includes:</span>
+          <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; border-top: 1px solid #3A5482">
+            <li style="padding: 14px 0; border-bottom: 1px solid #3A5482; font-family: Marcellus, serif; font-size: 21px">The Rosetta Stone</li>
+            <li style="padding: 14px 0; border-bottom: 1px solid #3A5482; font-family: Marcellus, serif; font-size: 21px">The Cyrus Cylinder</li>
+            <li style="padding: 14px 0; border-bottom: 1px solid #3A5482; font-family: Marcellus, serif; font-size: 21px">The Lachish Relief</li>
+            <li style="padding: 14px 0; border-bottom: 1px solid #3A5482; font-family: Marcellus, serif; font-size: 21px">The Black Obelisk of Shalmaneser</li>
+            <li style="padding: 14px 0; border-bottom: 1px solid #3A5482; font-family: Marcellus, serif; font-size: 21px">The Taylor Prism</li>
+          </ul>
+        </div>
+      </article>
 
-	</div>
-	<div class="clearfix"></div>
-	</div>
-	</div>
-	</div>
-	<!--end-moretours-->
-	<!--about-->
-	<!--about-->
-	<div class="about" id="about">
-		<div class="container">
-			<h3 class="tittle ab">About Us</h3>
-			<div class="about-top">
-				<div class="col-md-7 info">
-					<h5>Why Book A Tour?</h5>
-					<p>The world renowned British Museum is a treasure trove of artefacts relating directly or contextually to the
-						narrative of the Tenach and of Jewish history. In all, the museum showcases some 50,000 artefacts in almost
-						100 galleries, covering an area of over 92,000m²! To maximise your time in this vast museum, a tour guide
-						who can identify for you exhibitions of interest, who can bring information to illuminate what you are
-						seeing and who can tell a story that will bring the artefacts to life, is invaluable. If you are a student
-						of the Tenach, if you are a Jew who carries Jewish history in his or her heart, if you have an interest in
-						Biblical archaeology, book a Tenach Tour today for a truly memorable experience! </p>
+      <h3 style="margin: 16px 0 -16px; font-family: Marcellus, serif; font-weight: 400; font-size: 30px; line-height: 1.2">Alternatively, choose from one of the following six tours:</h3>
 
-					<div class="ab-bottom">
-						<h5>About the Tour Guide</h5>
-						<p>Your tour guide, Shoshana Tugendhaft, holds a BA in History and studied Ancient and Medieval Jewish Texts
-							in the Michlala in Jerusalem. She has been a teacher of Tenach, Jewish History and Jewish Philosophy for
-							over 20 years both at high school level and in adult education. In her tours, Shoshana combines her
-							enthusiasm for education with her passion for Jewish History to bring the world famous collections at the
-							museum to life. </p>
-					</div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px">
+        
+          <article style="border: 1px solid #E3E6EC; padding: 32px; display: flex; flex-direction: column; gap: 16px; background: #FFFFFF">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px">
+              <span style="font-family: Marcellus, serif; font-size: 56px; line-height: 1; color: #1F3A68">A</span>
+              <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A6219; font-weight: 600; text-align: right">Avraham to Egypt</span>
+            </div>
+            <h3 style="margin: 0; font-family: Marcellus, serif; font-weight: 400; font-size: 26px; line-height: 1.2">Under the Rule of the Pharaohs</h3>
+            <p style="margin: 0; color: #4A5263; flex-grow: 1">Follow Avraham’s family from Ur down into Egypt: Yosef’s story, Egyptian culture, life under slavery, and the mummies.</p>
+            <a href="#contact" style="font-weight: 600; font-size: 15px; text-decoration: none; padding: 10px 0">Ask about this tour →</a>
+          </article>
+        
+          <article style="border: 1px solid #E3E6EC; padding: 32px; display: flex; flex-direction: column; gap: 16px; background: #FFFFFF">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px">
+              <span style="font-family: Marcellus, serif; font-size: 56px; line-height: 1; color: #1F3A68">B</span>
+              <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A6219; font-weight: 600; text-align: right">First Temple</span>
+            </div>
+            <h3 style="margin: 0; font-family: Marcellus, serif; font-weight: 400; font-size: 26px; line-height: 1.2">The Assyrians are coming!</h3>
+            <p style="margin: 0; color: #4A5263; flex-grow: 1">The Assyrian assault on Israel and Judea led to the Ten Lost Tribes. Discover this story as seen on the palace reliefs of the Neo-Assyrian kings.</p>
+            <a href="#contact" style="font-weight: 600; font-size: 15px; text-decoration: none; padding: 10px 0">Ask about this tour →</a>
+          </article>
+        
+          <article style="border: 1px solid #E3E6EC; padding: 32px; display: flex; flex-direction: column; gap: 16px; background: #FFFFFF">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px">
+              <span style="font-family: Marcellus, serif; font-size: 56px; line-height: 1; color: #1F3A68">C</span>
+              <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A6219; font-weight: 600; text-align: right">Persian rule</span>
+            </div>
+            <h3 style="margin: 0; font-family: Marcellus, serif; font-weight: 400; font-size: 26px; line-height: 1.2">Purim in Persia</h3>
+            <p style="margin: 0; color: #4A5263; flex-grow: 1">Cyrus the Great conquers Babylon and the Jewish people find themselves under Persian rule. Life under Persian kings and in the court of Achashverosh, as told in Megillat Esther.</p>
+            <a href="#contact" style="font-weight: 600; font-size: 15px; text-decoration: none; padding: 10px 0">Ask about this tour →</a>
+          </article>
+        
+          <article style="border: 1px solid #E3E6EC; padding: 32px; display: flex; flex-direction: column; gap: 16px; background: #FFFFFF">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px">
+              <span style="font-family: Marcellus, serif; font-size: 56px; line-height: 1; color: #1F3A68">D</span>
+              <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A6219; font-weight: 600; text-align: right">Greek rule</span>
+            </div>
+            <h3 style="margin: 0; font-family: Marcellus, serif; font-weight: 400; font-size: 26px; line-height: 1.2">Alexander the Great and the Maccabean Revolt</h3>
+            <p style="margin: 0; color: #4A5263; flex-grow: 1">Alexander reaches the Land of Israel, and Greek culture clashes with Torah values. Learn about Hellenism and the holiday of Chanukah in its historical setting, from the museum’s remarkable collections.</p>
+            <a href="#contact" style="font-weight: 600; font-size: 15px; text-decoration: none; padding: 10px 0">Ask about this tour →</a>
+          </article>
+        
+          <article style="border: 1px solid #E3E6EC; padding: 32px; display: flex; flex-direction: column; gap: 16px; background: #FFFFFF">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px">
+              <span style="font-family: Marcellus, serif; font-size: 56px; line-height: 1; color: #1F3A68">E</span>
+              <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A6219; font-weight: 600; text-align: right">Roman rule</span>
+            </div>
+            <h3 style="margin: 0; font-family: Marcellus, serif; font-weight: 400; font-size: 26px; line-height: 1.2">Rome and the Jews</h3>
+            <p style="margin: 0; color: #4A5263; flex-grow: 1">From 63 BCE to the destruction of Jerusalem in 70 CE: the people and policies that shaped Jewish life under Rome.</p>
+            <a href="#contact" style="font-weight: 600; font-size: 15px; text-decoration: none; padding: 10px 0">Ask about this tour →</a>
+          </article>
+        
+          <article style="border: 1px solid #E3E6EC; padding: 32px; display: flex; flex-direction: column; gap: 16px; background: #FFFFFF">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px">
+              <span style="font-family: Marcellus, serif; font-size: 56px; line-height: 1; color: #1F3A68">F</span>
+              <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #8A6219; font-weight: 600; text-align: right">The full sweep</span>
+            </div>
+            <h3 style="margin: 0; font-family: Marcellus, serif; font-weight: 400; font-size: 26px; line-height: 1.2">The Four Galuyot</h3>
+            <p style="margin: 0; color: #4A5263; flex-grow: 1">The four exiles that the Jewish people endured were foretold in the book of Daniel. Travel back in time to see artefacts from each one, for a deeper understanding of Jewish history.</p>
+            <a href="#contact" style="font-weight: 600; font-size: 15px; text-decoration: none; padding: 10px 0">Ask about this tour →</a>
+          </article>
+        
+      </div>
+    </div>
+  </section>
 
-				</div>
-				<div class="col-md-5 ab-text">
-					<img src="images/ab2.jpg" alt="" />
-					<div class="quote-author-info padding1">
-						<p>Tour guide Shoshana Tugendhaft welcomes you to the British Museum</p>
+  <!-- Why book -->
+  <section style="background: #EEF1F5">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 56px">
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+        <span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6219; font-weight: 600">Why book a tour?</span>
+        <h2 class="h-section" style="margin: 0; font-family: Marcellus, serif; font-weight: 400; font-size: 40px; line-height: 1.15">The museum is vast. A guide brings it to life.</h2>
+        <p style="margin: 0; color: #4A5263">The British Museum holds around 50,000 artefacts across nearly 100 galleries. Many of them relate directly to the Tenach and Jewish history, but they are easy to walk past. A knowledgeable guide finds them for you and explains their relevance to our lives today.</p>
+      </div>
+      <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+        <span style="font-size: 15px; font-weight: 600">Ideal for</span>
+        <div style="display: flex; flex-direction: column; border-top: 1px solid #C9D0DB">
+          <div style="display: flex; gap: 16px; align-items: center; padding: 18px 0; border-bottom: 1px solid #C9D0DB"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F3A68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M4 12.5l5 5L20 6.5"></path></svg><span style="font-size: 18px">Students of Tenach</span></div>
+          <div style="display: flex; gap: 16px; align-items: center; padding: 18px 0; border-bottom: 1px solid #C9D0DB"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F3A68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M4 12.5l5 5L20 6.5"></path></svg><span style="font-size: 18px">Visitors to London</span></div>
+          <div style="display: flex; gap: 16px; align-items: center; padding: 18px 0; border-bottom: 1px solid #C9D0DB"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F3A68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M4 12.5l5 5L20 6.5"></path></svg><span style="font-size: 18px">Anyone interested in Jewish history</span></div>
+          <div style="display: flex; gap: 16px; align-items: center; padding: 18px 0; border-bottom: 1px solid #C9D0DB"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F3A68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M4 12.5l5 5L20 6.5"></path></svg><span style="font-size: 18px">Anyone, of any background, with an interest in biblical archaeology and the Hebrew Bible</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-					</div>
-					<iframe
-						src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ftellittoesti%2Fvideos%2F2589608784652626%2F&show_text=0&width=360"
-						width="360" height="190" align="center" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-						allowTransparency="true" allowFullScreen="true"></iframe>
-					<div class="quote-author-info padding1">
-						<p>Interview: "Tell it to Esti"</p>
+  <!-- About -->
+  <section id="about" style="background: #FFFFFF">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 64px; align-items: center">
+      <div style="flex: 1 1 380px; min-width: 0">
+        <img loading="lazy" src="images/socrates.jpg" alt="Shoshana Tugendhaft guiding a group beside a bust of Socrates" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 68% center">
+      </div>
+      <div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+        <span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6219; font-weight: 600">Your guide</span>
+        <h2 class="h-section" style="margin: 0; font-family: Marcellus, serif; font-weight: 400; font-size: 44px; line-height: 1.15">Mrs Shoshana Tugendhaft</h2>
+        <p style="margin: 0; color: #4A5263; font-size: 18px">Shoshana has been guiding tours at the British Museum for over 12 years. She holds a degree in History (BA Hist hons) and has been teaching Tenach, Jewish history, and Jewish philosophy for over 25 years. She is a published author and has over 700 shiurim (lectures) published online.</p>
+        <p style="margin: 0; color: #4A5263; font-size: 18px">Her tours bring that classroom enthusiasm into the galleries, linking the text to the artefacts from that very era.</p>
+        <button type="button" data-open-video style="display: flex; align-items: center; gap: 14px; text-align: left; font: inherit; cursor: pointer; background: #FFFFFF; border: 1px solid #E3E6EC; padding: 16px 20px; max-width: 440px; color: #1C2230">
+          <span style="width: 44px; height: 44px; border-radius: 50%; background: #1F3A68; color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0">
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
+          </span>
+          <span style="display: flex; flex-direction: column; line-height: 1.35"><span style="font-weight: 600">Watch the interview</span><span style="font-size: 14px; color: #5A6273">“Tell it to Esti”, on YouTube</span></span>
+        </button>
+      </div>
+    </div>
+  </section>
 
-					</div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-	</div>
-	<!--//about-->
+  <!-- Gallery -->
+  <section id="gallery" style="background: #142847; color: #FFFFFF">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #D9AE4E; font-weight: 600">Gallery</span>
+        <h2 class="h-section" style="margin: 0; font-family: Marcellus, serif; font-weight: 400; font-size: 44px; line-height: 1.15">Recent tours</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px">
+        
+          <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+            <img loading="lazy" src="images/socrates.jpg" alt="Getting to know Socrates, father of Western philosophy" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #3A5482">
+            <figcaption style="font-size: 15px; color: #DCE3EF">Getting to know Socrates, father of Western philosophy</figcaption>
+          </figure>
+        
+          <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+            <img loading="lazy" src="images/parthenon-metopes.jpg" alt="The metopes around the Parthenon tell a story of their own" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #3A5482">
+            <figcaption style="font-size: 15px; color: #DCE3EF">The metopes around the Parthenon tell a story of their own</figcaption>
+          </figure>
+        
+          <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+            <img loading="lazy" src="images/greek-amphorae.jpg" alt="Large Greek amphorae were a canvas for their finest artists" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #3A5482">
+            <figcaption style="font-size: 15px; color: #DCE3EF">Large Greek amphorae were a canvas for their finest artists</figcaption>
+          </figure>
+        
+          <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+            <img loading="lazy" src="images/parthenon-frieze.jpg" alt="Families learn about the Parthenon frieze before Chanukah" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #3A5482">
+            <figcaption style="font-size: 15px; color: #DCE3EF">Families learn about the Parthenon frieze before Chanukah</figcaption>
+          </figure>
+        
+          <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+            <img loading="lazy" src="images/great-court.jpg" alt="The Great Court, covered in 2000" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #3A5482">
+            <figcaption style="font-size: 15px; color: #DCE3EF">The Great Court, covered in 2000</figcaption>
+          </figure>
+        
+          <figure style="margin: 0; display: flex; flex-direction: column; gap: 12px">
+            <img loading="lazy" src="images/discus-thrower.jpg" alt="Debating the Discus Thrower in the King’s Library" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #3A5482">
+            <figcaption style="font-size: 15px; color: #DCE3EF">Debating the Discus Thrower in the King’s Library</figcaption>
+          </figure>
+        
+      </div>
+    </div>
+  </section>
 
-	<svg id="curveDownColor1" xmlns="https://www.w3.org/2000/svg" version="1.1" width="100%" height="100"
-		viewBox="0 0 100 100" preserveAspectRatio="none">
-		<path d="M0 0 C 50 100 80 100 100 0 Z"></path>
-	</svg>
-	<!--//about-->
-	<!--start-gallery-->
-	<div class="gallery" id="gallery">
-		<div class="container">
-			<h3 class="tittle">Gallery</h3>
-			<iv class="top-gallery">
-				<div class="col-md-4 gallery-grid gallery1">
-					<a href="images/2020one.jpg" class="swipebox"><img src="images/2020one.jpg" class="img-responsive" alt="/">
-						<div class="textbox">
-							<h4>Socrates</h4>
-							<p>Getting to know Getting to know Socrates, father of Western Philosophy</p>
+  <!-- Testimonials -->
+  <section id="testimonials" style="background: #FFFFFF">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 40px">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6219; font-weight: 600">Testimonials</span>
+        <h2 class="h-section" style="margin: 0; font-family: Marcellus, serif; font-weight: 400; font-size: 44px; line-height: 1.15">What groups say</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
+        
+          <blockquote style="margin: 0; padding: 32px; background: #EEF1F5; display: flex; flex-direction: column; gap: 20px">
+            <span aria-hidden="true" style="font-family: Marcellus, serif; font-size: 56px; line-height: 0.6; color: #1F3A68; height: 28px">“</span>
+            <p style="margin: 0; font-size: 19px; line-height: 1.5; flex-grow: 1">A huge thank you to Shoshana for her wonderful presentation… it was a real Chanukah treat!</p>
+            <cite style="font-style: normal; font-weight: 600; font-size: 15px; color: #4A5263">Rachelle L.</cite>
+          </blockquote>
+        
+          <blockquote style="margin: 0; padding: 32px; background: #EEF1F5; display: flex; flex-direction: column; gap: 20px">
+            <span aria-hidden="true" style="font-family: Marcellus, serif; font-size: 56px; line-height: 0.6; color: #1F3A68; height: 28px">“</span>
+            <p style="margin: 0; font-size: 19px; line-height: 1.5; flex-grow: 1">That was fascinating… thank you Shoshana for being an outstanding guide!</p>
+            <cite style="font-style: normal; font-weight: 600; font-size: 15px; color: #4A5263">Amelie L.</cite>
+          </blockquote>
+        
+          <blockquote style="margin: 0; padding: 32px; background: #EEF1F5; display: flex; flex-direction: column; gap: 20px">
+            <span aria-hidden="true" style="font-family: Marcellus, serif; font-size: 56px; line-height: 0.6; color: #1F3A68; height: 28px">“</span>
+            <p style="margin: 0; font-size: 19px; line-height: 1.5; flex-grow: 1">The boys really loved that… thank you for bringing ancient Egypt to life for us! When can we book another tour?!</p>
+            <cite style="font-style: normal; font-weight: 600; font-size: 15px; color: #4A5263">Tzipporah M.</cite>
+          </blockquote>
+        
+      </div>
+    </div>
+  </section>
 
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 gallery-grid gallery1">
-					<a href="images/2020two.jpg" class="swipebox"><img src="images/2020two.jpg" class="img-responsive" alt="/">
-						<div class="textbox">
-							<h4>Metopes</h4>
-							<p>The metopes surrounding the Parthenon tell a story of their own</p>
+  <!-- How booking works -->
+  <section style="background: #EEF1F5">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; gap: 32px">
+      <h2 class="h-section" style="margin: 0; font-family: Marcellus, serif; font-weight: 400; font-size: 36px; line-height: 1.15">How booking works</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px">
+        <div style="background: #FFFFFF; padding: 28px; display: flex; flex-direction: column; gap: 10px"><span style="font-family: Marcellus, serif; font-size: 28px; color: #1F3A68">01</span><span style="font-weight: 600; font-size: 18px">Get in touch</span><span style="color: #4A5263">Email or call with your group and dates. You will hear back within one working day.</span></div>
+        <div style="background: #FFFFFF; padding: 28px; display: flex; flex-direction: column; gap: 10px"><span style="font-family: Marcellus, serif; font-size: 28px; color: #1F3A68">02</span><span style="font-weight: 600; font-size: 18px">Free quote</span><span style="color: #4A5263">Pricing depends on your group, so every quote is tailored and free.</span></div>
+        <div style="background: #FFFFFF; padding: 28px; display: flex; flex-direction: column; gap: 10px"><span style="font-family: Marcellus, serif; font-size: 28px; color: #1F3A68">03</span><span style="font-weight: 600; font-size: 18px">Book 3+ days ahead</span><span style="color: #4A5263">Tours need at least three days’ notice. Each runs for two hours, starting in front of the museum.</span></div>
+        <div style="background: #FFFFFF; padding: 28px; display: flex; flex-direction: column; gap: 10px"><span style="font-family: Marcellus, serif; font-size: 28px; color: #1F3A68">04</span><span style="font-weight: 600; font-size: 18px">Pay after the tour</span><span style="color: #4A5263">Payment is due once the tour is done.</span></div>
+      </div>
+    </div>
+  </section>
 
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 gallery-grid gallery1">
-					<a href="images/2020three.jpg" class="swipebox"><img src="images/2020three.jpg" class="img-responsive"
-							alt="/">
-						<div class="textbox">
-							<h4>Greek Amphorae</h4>
-							<p>Large Greek amphorae were a canvas for their finest artists. What do they reveal about ancient Greek
-								culture?</p>
+  <!-- Contact -->
+  <section id="contact" style="background: #FFFFFF">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 64px">
+      <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+        <span style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6219; font-weight: 600">Contact</span>
+        <h2 class="h-section" style="margin: 0; font-family: Marcellus, serif; font-weight: 400; font-size: 44px; line-height: 1.15">Arranging a tour?</h2>
+        <p style="margin: 0; color: #4A5263; font-size: 18px">Send a few details and Shoshana will typically reply within 1 working day with a free quote.</p>
+        <div style="display: flex; flex-direction: column; gap: 14px; padding-top: 8px; font-size: 16px">
+          <div style="display: flex; gap: 12px; align-items: center"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F3A68" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg><a href="tel:+447816847900" style="text-decoration: none">+44 (0)7816 847 900</a></div>
+          <div style="display: flex; gap: 12px; align-items: center"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F3A68" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M22 6l-10 7L2 6"></path></svg><a href="mailto:shoshanatug@gmail.com" style="text-decoration: none">shoshanatug@gmail.com</a></div>
+          <div style="display: flex; gap: 12px; align-items: center"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F3A68" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"></path><circle cx="12" cy="10" r="2.5"></circle></svg><span>Based in Hendon, London NW4</span></div>
+        </div>
+      </div>
+      <form id="quote-form" novalidate style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 18px; background: #EEF1F5; padding: 36px">
+        <div style="display: flex; flex-wrap: wrap; gap: 18px">
+          <label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Your name<input name="name" id="f-name" required type="text" style="height: 48px; border: 1px solid #C9D0DB; background: #FFFFFF; padding: 0 14px; font: inherit; font-weight: 400"></label>
+          <label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Email<input name="email" id="f-email" required type="email" style="height: 48px; border: 1px solid #C9D0DB; background: #FFFFFF; padding: 0 14px; font: inherit; font-weight: 400"></label>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 18px">
+          <label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Group type<select name="group_type" id="f-group_type" style="height: 48px; border: 1px solid #C9D0DB; background: #FFFFFF; padding: 0 14px; font: inherit; font-weight: 400"><option value="" selected>Please choose…</option><option>School</option><option>Shul</option><option>Organisation</option><option>Family or private group</option><option>Visitors to London</option><option>Other</option></select></label>
+          <label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Group size<input name="group_size" id="f-group_size" type="number" style="height: 48px; border: 1px solid #C9D0DB; background: #FFFFFF; padding: 0 14px; font: inherit; font-weight: 400"></label>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 18px">
+          <label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Tour<select name="tour" id="f-tour" style="height: 48px; border: 1px solid #C9D0DB; background: #FFFFFF; padding: 0 14px; font: inherit; font-weight: 400"><option>Not sure yet</option><option>The Highlights Tour (most popular)</option><option>A · Under the Rule of the Pharaohs</option><option>B · The Assyrians are coming!</option><option>C · Purim in Persia</option><option>D · Alexander the Great and the Maccabean Revolt</option><option>E · Rome and the Jews</option><option>F · The Four Galuyot</option></select></label>
+          <label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Preferred date<input name="date" id="f-date" type="date" style="height: 48px; border: 1px solid #C9D0DB; background: #FFFFFF; padding: 0 14px; font: inherit; font-weight: 400"></label>
+        </div>
+        <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Anything else?<textarea name="message" id="f-message" rows="4" style="border: 1px solid #C9D0DB; background: #FFFFFF; padding: 12px 14px; font: inherit; font-weight: 400; resize: vertical"></textarea></label>
+        <button type="submit" style="align-self: flex-start; background: #1F3A68; color: #FFFFFF; border: 0; padding: 15px 28px; font: inherit; font-weight: 600; cursor: pointer; border-radius: 2px">Request a free quote</button>
+        <span style="font-size: 13px; color: #4A5263">Book at least three days ahead. Payment after the tour.</span>
+        <p id="form-status" role="status" style="margin: 0; font-size: 14px; color: #1F3A68"></p>
+      </form>
+    </div>
+  </section>
 
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 gallery-grid gallery1">
-					<a href="images/2020four.jpg" class="swipebox"><img src="images/2020four.jpg" class="img-responsive" alt="/">
-						<div class="textbox">
-							<h4>Parthenon Frieze</h4>
-							<p>A group of families come to learn about the Parthenon frieze in advance of the Channukah Festival.</p>
+  </main>
+  <!-- Footer -->
+  <footer style="background: #142847; color: #B9C6DC; font-size: 14px">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px">
+      <span><span style="font-family: Marcellus, serif; color: #FFFFFF; font-size: 18px">Tenach Tours</span> · Mrs Shoshana Tugendhaft · Hendon, London NW4</span>
+      <a href="#home" style="color: #DCE3EF">Back to top ↑</a>
+      <span style="flex-basis: 100%; font-size: 13px; color: #8FA3C4">© 2026 Tenach Tours. All rights reserved.</span>
+    </div>
+  </footer>
+  <!-- Video overlay -->
+  
+    <div id="video-modal" hidden style="position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center; padding: 24px">
+      <button type="button" aria-label="Close video" data-close-video style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background: rgba(10, 18, 34, 0.82); cursor: pointer"></button>
+      <div role="dialog" aria-modal="true" aria-label="Interview: Tell it to Esti" style="position: relative; width: 100%; max-width: 960px; display: flex; flex-direction: column; gap: 12px">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; color: #FFFFFF">
+          <span style="font-family: Marcellus, serif; font-size: 22px">Interview: “Tell it to Esti”</span>
+          <button type="button" aria-label="Close video" data-close-video style="width: 44px; height: 44px; border: 1px solid #8FA3C4; background: transparent; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer; border-radius: 2px">
+            <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+          </button>
+        </div>
+        <div id="video-frame" style="width: 100%; aspect-ratio: 16 / 9; background: #000000"></div>
+        <a href="https://www.youtube.com/watch?v=wOZ0_6i6oQo" style="align-self: flex-end; color: #DCE3EF; font-size: 14px; padding: 8px 0">Open on YouTube ↗</a>
+      </div>
+    </div>
+  
+</div>
 
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 gallery-grid gallery1">
-					<a href="images/2020five.jpg" class="swipebox"><img src="images/2020five.jpg" class="img-responsive" alt="/">
-						<div class="textbox">
-							<h4>Great Court</h4>
-							<p>The iconic Great Court at the British Museum was covered in the year 2000. It is sure to get a wow!</p>
-
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 gallery-grid gallery1">
-					<a href="images/2020six.jpg" class="swipebox"><img src="images/2020six.jpg" class="img-responsive" alt="/">
-						<div class="textbox">
-							<h4>Discus Thrower</h4>
-							<p>Debating the Discus Thrower in the King's Library</p>
-						</div>
-					</a>
-				</div>
-				<div class="clearfix"> </div>
-		</div>
-	</div>
-	</div>
-	<!--//gallery-->
-	<!--start-testimonial-->
-	<div class="testimonial" id="test">
-		<div class="container">
-			<h3 class="tittle ab">Testimonials</h3>
-			<div class="wmuSlider example1">
-				<div class="wmuSliderWrapper">
-					<article style="position: absolute; width: 100%; opacity: 0;">
-						<div class="grid-matter-bottom">
-							<div class="col-sm-8 testimonilal_left">
-								<h3>Rach<span class="m_5">elle L.</span></h3>
-								<p><span class="quotes"> </span>A huge thank you to Shoshana for her wonderful presentation...it was a
-									real Channukah treat!<span class="quote_down"></span></p>
-							</div>
-							<div class="col-sm-4">
-								<div class="testimonilal_right">
-									<!--	<img class="img-responsive" src="images/c1.jpg" alt="" /> -->
-								</div>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</article>
-					<article style="position: absolute; width: 100%; opacity: 0;">
-						<div class="grid-matter-bottom">
-							<div class="col-sm-8 testimonilal_left">
-								<h3>Amel<span class="m_5">ie L.</span></h3>
-								<p><span class="quotes"> </span>That was fascinating...thank you Shoshana for being an outstanding
-									guide!<span class="quote_down"></span></p>
-							</div>
-							<div class="col-sm-4">
-								<div class="testimonilal_right">
-									<!--	<img class="img-responsive" src="images/c2.jpg" alt="" /> -->
-								</div>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</article>
-					<article style="position: absolute; width: 100%; opacity: 0;">
-						<div class="grid-matter-bottom">
-							<div class="col-sm-8 testimonilal_left">
-								<h3>Tzippor<span class="m_5">ah M.</span></h3>
-								<p><span class="quotes"> </span>The boys really loved that...thank you for bringing ancient Egypt to
-									life for us! When can we book another tour?!<span class="quote_down"></span></p>
-							</div>
-							<div class="col-sm-4">
-								<div class="testimonilal_right">
-									<!--	<img class="img-responsive" src="images/c1.jpg" alt="" /> -->
-								</div>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</article>
-				</div>
-			</div>
-			<script src="js/jquery.wmuSlider.js"></script>
-			<script>
-				$('.example1').wmuSlider();
-			</script>
-		</div>
-	</div>
-
-	<svg id="curveDownColor1" xmlns="https://www.w3.org/2000/svg" version="1.1" width="100%" height="100"
-		viewBox="0 0 100 100" preserveAspectRatio="none">
-		<path d="M0 0 C 50 100 80 100 100 0 Z"></path>
-	</svg>
-	<!--contact -->
-	<div id="contact" class="contact">
-		<div class="container">
-			<h3 class="tittle">Contact Us</h3>
-			<div class="contact-info">
-				<h6>Do you want to arrange a Tenach Tour for your Group, Organisation, School or Shul? </h6>
-				<p>Get in touch so we can see how we can accommodate you and your group. You should receive a reply to any email
-					within 24 hours. Tours <b>must</b> be arranged at least three days prior to the date of the visit and paid for
-					on completion of the tour. Pricing differs from group to group, please contact us for a free quote today.</p>
-				<div class="con-text">
-					<address>
-						<strong>Mrs Shoshana Tugendhaft | Tenach Tours</strong><br>
-						Hendon<br>
-						London, NW4<br>
-						<abbr title="Phone">P :</abbr> <a href="tel:+447816847900">+44 7816 847 900</a>
-					</address>
-					<address>
-						<strong>Email</strong><br>
-						<a href="mailto:shoshanatug@gmail.com">shoshanatug@gmail.com</a>
-					</address>
-
-				</div>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-	</div>
-	<!--//contact-->
-
-	<!--start-smooth-scrolling-->
-	<script type="text/javascript">
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
-				$('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
-			});
-		});
-	</script>
-	<!--start-smoth-scrolling-->
-	<script type="text/javascript">
-		$(document).ready(function () {
-			/*
-			var defaults = {
-					containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear'
-				};
-			*/
-
-			$().UItoTop({easingType: 'easeOutQuart'});
-
-		});
-	</script>
-	<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;">
-		</span></a>
-
+<script src="script.js"></script>
 </body>
-
 </html>
